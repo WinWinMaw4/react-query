@@ -1,4 +1,12 @@
  npx create-react-app react-query-demo
 
 i want to use vite
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite#step-4-removing-the-default-boilerplate
 1 yarn create vite
+2 add tailwind css with yarn
+  	yarn add -D tailwindcss postcss autoprefixer
+	yarn tailwindcss init -p
+3 add mock data
+  yarn add json-server
+https://mockaroo.com/
+"serve-json": "json-server --watch db.json --port 4000"

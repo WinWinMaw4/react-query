@@ -1,0 +1,19 @@
+{
+    "superheroes":[
+        {
+            "id": "f21c29d8-5463-4720-a2f7-0fdb435a8988",
+            "name": "Batman",
+            "alterEgo": "Brucce Wayne"
+          }, 
+          {
+            "id": "239da55a-6b13-45f0-bdf8-84e34a2299f7",
+            "name": "Superman",
+            "alterEgo": "Clark Kent"
+          },
+          {
+            "id": "a6c979bc-9224-4372-b0dc-11a4a0d96b32",
+            "name": "Wonder Woman",
+            "alterEgo": "Princess Diana"
+            }
+    ]
+}
