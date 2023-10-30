@@ -1,0 +1,4 @@
+ npx create-react-app react-query-demo
+
+i want to use vite
+1 yarn create vite
