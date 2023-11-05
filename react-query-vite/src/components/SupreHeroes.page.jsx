@@ -4,7 +4,7 @@ const SupreHeroes= () => {
   return (
     <>
     <NavBar />
-    uperHeroes.page
+    superHeroes.page
     </>
   )
 }
