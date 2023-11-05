@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(48, 48, 48);
+    color: rgb(232, 232, 232);
+}
+#navbar a.active {
+    color: black;
+    font-weight: bold;
+  }
