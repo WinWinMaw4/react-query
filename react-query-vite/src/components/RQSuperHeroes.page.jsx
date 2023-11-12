@@ -3,7 +3,7 @@ import NavBar from "./layout/NavBar"
 import axios from "axios"
 
 const fetchSuperHeroesData = () =>{
-  return axios.get('http://localhost:4000/superheroes1')
+  return axios.get('http://localhost:4000/superheroes')
 }
 
 const RQSuperHeroes = () => {
@@ -21,6 +21,7 @@ if(isError) return <h2>{error.message}</h2>
         return <div key={hero.id}>{hero.name}</div>
       })}      
     </section>
+
     </>
   )
 }
