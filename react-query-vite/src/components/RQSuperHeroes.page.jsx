@@ -11,7 +11,8 @@ const {isLoading, data, isError, error, isFetching} = useQuery(
   'super-heroes',
   fetchSuperHeroesData,
   {
-    cacheTime:5000
+    // cacheTime:5000, //cacheTime 5000 is default
+    staleTime:30000,// staleTime 0 is default
   }
   )
 
