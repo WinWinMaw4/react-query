@@ -7,23 +7,17 @@ const fetchSuperHeroesData = () =>{
 }
 
 const RQSuperHeroes = () => {
-const {isLoading, data, isError, error, isFetching} = useQuery(
+const {isLoading, data, isError, error, isFetching, refetch} = useQuery(
   'super-heroes',
   fetchSuperHeroesData,
   {
-    // cacheTime:5000, //cacheTime 5000 is default
-    // staleTime:0,// staleTime 0 is default
-    // refetchOnMount: true, //this is traditional data fetching, fetching always mount
-    // refetchOnWindowFocus: true, //default is true
-
-    refetchInterval:2000, //auto refetch every 2 s
-    refetchIntervalInBackground: true,
+   enabled:false
   }
   )
 
 console.log({isLoading,isFetching})
 
-if(isLoading) return <h2>Loading...</h2>
+if(isLoading || isFetching) return <h2>Loading...</h2>
 if(isError) return <h2>{error.message}</h2>
 
   return (
@@ -31,6 +25,7 @@ if(isError) return <h2>{error.message}</h2>
     <NavBar />
     <section>
       <h2 className="text-xl font-bold">RQ Super Heroes</h2>
+      <button onClick={refetch} className="bg-red-600/50 border border-red-600 border-spacing-6 px-2 py-1 text-black"> fetch heroes</button>
       {data?.data.map((hero)=>{
         return <div key={hero.id}>{hero.name}</div>
       })}      
