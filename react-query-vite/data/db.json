@@ -14,6 +14,11 @@
             "id": "a6c979bc-9224-4372-b0dc-11a4a0d96b32",
             "name": "Wonder Woman",
             "alterEgo": "Princess Diana"
-            }
+            },
+            {
+              "id": "a6c979bc-9224-4372-b0dc-11a4a0d96b33",
+              "name": "Wonder Woman 2",
+              "alterEgo": "Princess Diana 2"
+              }
     ]
 }
