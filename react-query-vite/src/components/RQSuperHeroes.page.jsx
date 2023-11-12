@@ -13,8 +13,11 @@ const {isLoading, data, isError, error, isFetching} = useQuery(
   {
     // cacheTime:5000, //cacheTime 5000 is default
     // staleTime:0,// staleTime 0 is default
-    refetchOnMount: true, //this is traditional data fetching, fetching always mount
-    refetchOnWindowFocus: true, //default is true
+    // refetchOnMount: true, //this is traditional data fetching, fetching always mount
+    // refetchOnWindowFocus: true, //default is true
+
+    refetchInterval:2000, //auto refetch every 2 s
+    refetchIntervalInBackground: true,
   }
   )
 
