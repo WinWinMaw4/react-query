@@ -9,15 +9,12 @@ const fetchSuperHeroesData = () =>{
 
 const RQSuperHeroes = () => {
 
-  const [duration, setDuration] = useState(2000)
 
 const onHandleSuccess = (data) => {
-  if(data.data.length == 4 ) setDuration(false)
   console.log("Perform side effect after data fetching",data)
 }
 
 const onHandleError = (error) => {
-  if(error) setDuration(false)
   console.log("Perform side effect after encountering error",error)
 }
 
@@ -27,8 +24,10 @@ const {isLoading, data, isError, error, isFetching, refetch} = useQuery(
   {
     onSuccess:onHandleSuccess,
     onError:onHandleError,
-    refetchInterval: duration,
-    refetchIntervalInBackground: true
+    select: (data) => {
+      const superHeroNames = data.data.map(hero => hero.name)
+      return superHeroNames
+    }
   }
   )
 
@@ -43,9 +42,12 @@ if(isError) return <h2>{error.message}</h2>
     <section>
       <h2 className="text-xl font-bold">RQ Super Heroes</h2>
       <button onClick={refetch} className="bg-red-600/50 border border-red-600 border-spacing-6 px-2 py-1 text-black"> fetch heroes</button>
-      {data?.data.map((hero)=>{
+      {/* {data?.data.map((hero)=>{
         return <div key={hero.id}>{hero.name}</div>
-      })}      
+      })}       */}
+      {data.map((heroName) => {
+        return <div key={heroName}>{heroName}</div>
+      })}
     </section>
 
     </>
