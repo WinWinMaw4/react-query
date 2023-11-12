@@ -12,7 +12,9 @@ const {isLoading, data, isError, error, isFetching} = useQuery(
   fetchSuperHeroesData,
   {
     // cacheTime:5000, //cacheTime 5000 is default
-    staleTime:30000,// staleTime 0 is default
+    // staleTime:0,// staleTime 0 is default
+    refetchOnMount: true, //this is traditional data fetching, fetching always mount
+    refetchOnWindowFocus: true, //default is true
   }
   )
 
