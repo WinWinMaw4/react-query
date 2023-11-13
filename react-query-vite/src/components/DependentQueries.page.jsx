@@ -14,7 +14,17 @@ const DependentQueries = ({email}) => {
     const {data:courses} = useQuery(['courses',channelId], ()=>fetchCoursesByChannelId(channelId),{enabled: !!channelId})
 
   return (
-    <div>DependentQueries.page</div>
+    <>
+     <h1>Courses</h1>
+     <h3 className="text-xl underline">{courses?.data?.id}</h3>
+      {courses?.data?.courses?.map((course, index) => (
+        <div key={index}>
+          <ul>
+            <li>{course}</li>
+          </ul>
+        </div>
+      ))}
+    </>
   )
 }
 
