@@ -4,6 +4,7 @@ import SupreHeroes from "./SupreHeroes.page"
 import RQSuperHeroes from "./RQSuperHeroes.page"
 import Error404 from './layout/Error404.page'
 import RQSuperHero from './RQSuperHero'
+import ParallelQueries from './ParallelQueries.page'
 
 const AppRoute = () => {
   return (
@@ -12,6 +13,7 @@ const AppRoute = () => {
     <Route path="/superheroes" element={<SupreHeroes />} />
     <Route path="/rqsuperheroes" element={<RQSuperHeroes />} />
     <Route path='/rqsuperhero/:heroId' element={<RQSuperHero />} />
+    <Route path="/rqparallel" element={<ParallelQueries />} />
     <Route path="*" element={<Error404 />} />
 
   </Routes>
