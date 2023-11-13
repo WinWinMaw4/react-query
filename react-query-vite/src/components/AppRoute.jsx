@@ -3,6 +3,7 @@ import Home from "./Home.page"
 import SupreHeroes from "./SupreHeroes.page"
 import RQSuperHeroes from "./RQSuperHeroes.page"
 import Error404 from './layout/Error404.page'
+import RQSuperHero from './RQSuperHero'
 
 const AppRoute = () => {
   return (
@@ -10,6 +11,7 @@ const AppRoute = () => {
     <Route path="/" element={<Home />} />
     <Route path="/superheroes" element={<SupreHeroes />} />
     <Route path="/rqsuperheroes" element={<RQSuperHeroes />} />
+    <Route path='/rqsuperhero/:heroId' element={<RQSuperHero />} />
     <Route path="*" element={<Error404 />} />
 
   </Routes>

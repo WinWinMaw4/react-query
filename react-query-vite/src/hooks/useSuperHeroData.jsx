@@ -1,14 +1,15 @@
 import { useQuery } from 'react-query'
 import axios from 'axios'
 
-const fetchSuperHeroesData = () =>{
-    return axios.get('http://localhost:4000/superheroes')
+const fetchSuperHeroeData = ({queryKey}) =>{
+    const heroId = queryKey[1]
+    return axios.get(`http://localhost:4000/superheroes/${heroId}`)
   }
   
-const useSuperHeroesData = (onSuccess, onError) => {
+const useSuperHeroData = (onSuccess, onError, heroId) => {
    return useQuery(
-        'super-heroes',
-        fetchSuperHeroesData,
+        ['super-heroes',heroId],
+        fetchSuperHeroeData,
         {
           onSuccess,
           onError,
@@ -20,4 +21,4 @@ const useSuperHeroesData = (onSuccess, onError) => {
         )
 }
 
-export default useSuperHeroesData
+export default useSuperHeroData
