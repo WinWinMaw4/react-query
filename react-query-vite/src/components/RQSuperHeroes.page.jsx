@@ -18,8 +18,8 @@ const {isLoading, data, isError, error, isFetching, refetch} = useSuperHeroesDat
 
 console.log({isLoading,isFetching})
 
-if(isLoading || isFetching) return <h2>Loading...</h2>
-if(isError) return <h2>{error.message}</h2>
+// if(isLoading || isFetching) return <h2>Loading...</h2>
+// if(isError) return <h2>{error.message}</h2>
 // if(data) return console.log(data.data);
   return (
     <>
