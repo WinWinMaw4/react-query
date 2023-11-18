@@ -8,6 +8,7 @@ import ParallelQueries from './ParallelQueries.page'
 import DynamicParallel from './DynamicParallel.page'
 import DependentQueries from './DependentQueries.page'
 import PaginatedQueriesPage from './PaginatedQueries.page'
+import InfinitedQueriesPage from './InfinitedQueries.page'
 
 const AppRoute = () => {
   return (
@@ -20,6 +21,8 @@ const AppRoute = () => {
     <Route path="/rqdynamicparallel" element={<DynamicParallel heroIds={[1,3]} />} />
     <Route path="/rqdependent" element={<DependentQueries email='mawinwinmaw4@gmail.com' />} />
     <Route path="/rqpaginated" element={<PaginatedQueriesPage />} />
+    <Route path="/rqinfinited" element={<InfinitedQueriesPage />} />
+
 
     <Route path="*" element={<Error404 />} />
 
